@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paul & Yna | Wedding Invitation</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --navy: #071426;
+            --navy-soft: #0e1d36;
+            --purple: #3b1d63;
+            --purple-soft: #522783;
+            --gold: #d8bd7f;
+            --ivory: #f8f4ec;
+            --muted: #cfc6ba;
+            --glass: rgba(255, 255, 255, 0.075);
+            --border: rgba(255, 255, 255, 0.16);
+            --shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Montserrat", sans-serif;
+            background: var(--navy);
+            color: var(--ivory);
+            line-height: 1.75;
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: "Cormorant Garamond", serif;
+            font-weight: 600;
+            line-height: 1.1;
+        }
+
+        section {
+            padding: 110px 8%;
+            scroll-margin-top: 105px;
+        }
+
+        .container {
+            max-width: 1180px;
+            margin: 0 auto;
+        }
+
+        .section-kicker {
+            text-align: center;
+            color: var(--gold);
+            font-size: 0.78rem;
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            text-align: center;
+            color: var(--ivory);
+            font-size: clamp(2.8rem, 5vw, 4.6rem);
+            margin-bottom: 48px;
+        }
+
+        .section-title span {
+            color: var(--gold);
+        }
+
+        /* Navigation */
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 999;
+            background: rgba(7, 20, 38, 0.86);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .nav-inner {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 13px 8%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .brand {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 1.42rem;
+            color: var(--gold);
+            letter-spacing: 0.04em;
+            white-space: nowrap;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 22px;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            font-size: 0.74rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: rgba(248, 244, 236, 0.88);
+            position: relative;
+            transition: color 0.25s ease;
+        }
+
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -7px;
+            width: 0;
+            height: 1px;
+            background: var(--gold);
+            transition: width 0.25s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero */
+
+        .hero {
+            min-height: 100vh;
+            min-height: 100svh;
+            padding: clamp(88px, 13vh, 125px) 8% clamp(18px, 4vh, 48px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            isolation: isolate;
+            background:
+                linear-gradient(
+                    180deg,
+                    rgba(7, 20, 38, 0.50),
+                    rgba(59, 29, 99, 0.70) 58%,
+                    rgba(7, 20, 38, 0.92)
+                ),
+                url("images/background.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            background:
+                radial-gradient(circle at 50% 32%, rgba(216, 189, 127, 0.16), transparent 31%),
+                radial-gradient(circle at 20% 80%, rgba(82, 39, 131, 0.38), transparent 38%);
+        }
+
+        .hero-card {
+            width: min(900px, 100%);
+            padding: clamp(22px, 4.5vw, 48px);
+            border: 1px solid var(--border);
+            border-radius: 32px;
+            background: rgba(7, 20, 38, 0.34);
+            backdrop-filter: blur(10px);
+            box-shadow: var(--shadow);
+        }
+
+        .greeting {
+            color: var(--gold);
+            font-size: 0.82rem;
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .hero h1 {
+            font-size: clamp(3.35rem, 8vw, 6.7rem);
+            color: var(--ivory);
+            text-shadow: 0 18px 50px rgba(0, 0, 0, 0.34);
+            margin-bottom: 14px;
+        }
+
+        .ampersand {
+            display: block;
+            color: var(--gold);
+            font-size: 0.52em;
+            margin: 4px 0;
+        }
+
+        .tagline {
+            font-family: "Cormorant Garamond", serif;
+            font-size: clamp(1.25rem, 2.6vw, 1.9rem);
+            color: var(--gold);
+            margin-bottom: 12px;
+        }
+
+        .date {
+            color: var(--ivory);
+            font-size: 0.82rem;
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        .invite {
+            max-width: 700px;
+            margin: 0 auto;
+            color: rgba(248, 244, 236, 0.88);
+            font-size: 0.94rem;
+        }
+
+        .countdown {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(82px, 1fr));
+            gap: 14px;
+            margin-top: 26px;
+        }
+
+        .time-box {
+            padding: 16px 10px;
+            border-radius: 20px;
+            background: var(--glass);
+            border: 1px solid var(--border);
+        }
+
+        .time-box span {
+            display: block;
+            font-size: clamp(1.45rem, 3.4vw, 2.1rem);
+            font-weight: 600;
+            color: var(--ivory);
+        }
+
+        .time-box small {
+            color: var(--gold);
+            font-size: 0.68rem;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+
+        /* Story */
+
+        .story {
+            background: linear-gradient(180deg, var(--navy), var(--navy-soft));
+        }
+
+        .story-panel {
+            max-width: 920px;
+            margin: 0 auto;
+            padding: clamp(30px, 6vw, 58px);
+            border-radius: 30px;
+            background: var(--glass);
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+        }
+
+        .story-panel p {
+            color: rgba(248, 244, 236, 0.88);
+            margin-bottom: 22px;
+        }
+
+        .story-panel p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Timeline */
+
+        .timeline-section {
+            background:
+                radial-gradient(circle at top, rgba(82, 39, 131, 0.34), transparent 42%),
+                #0a172d;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 1020px;
+            margin: 0 auto;
+        }
+
+        .timeline::after {
+            content: "";
+            position: absolute;
+            width: 2px;
+            background: linear-gradient(var(--gold), rgba(216, 189, 127, 0.25), var(--gold));
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            position: relative;
+            width: 50%;
+            padding: 12px 42px 34px;
+        }
+
+        .timeline-item.left {
+            left: 0;
+            text-align: right;
+        }
+
+        .timeline-item.right {
+            left: 50%;
+            text-align: left;
+        }
+
+        .timeline-item::after {
+            content: "";
+            position: absolute;
+            top: 28px;
+            width: 18px;
+            height: 18px;
+            background: var(--gold);
+            border: 5px solid #0a172d;
+            border-radius: 999px;
+            z-index: 2;
+            box-shadow: 0 0 0 1px rgba(216, 189, 127, 0.35);
+        }
+
+        .timeline-item.left::after {
+            right: -14px;
+        }
+
+        .timeline-item.right::after {
+            left: -14px;
+        }
+
+        .timeline-content {
+            padding: 26px;
+            border-radius: 24px;
+            background: var(--glass);
+            border: 1px solid var(--border);
+            box-shadow: 0 18px 42px rgba(0, 0, 0, 0.22);
+        }
+
+        .timeline-content h3 {
+            color: var(--gold);
+            font-size: 1.85rem;
+            margin-bottom: 8px;
+        }
+
+        .timeline-content p {
+            color: rgba(248, 244, 236, 0.88);
+        }
+
+        /* Details */
+
+        .details {
+            background: linear-gradient(180deg, #0a172d, #13203c);
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .card {
+            padding: 34px;
+            border-radius: 28px;
+            background: var(--glass);
+            border: 1px solid var(--border);
+            box-shadow: 0 16px 44px rgba(0, 0, 0, 0.22);
+        }
+
+        .card h3 {
+            color: var(--gold);
+            font-size: 2rem;
+            margin-bottom: 16px;
+        }
+
+        .card p {
+            color: rgba(248, 244, 236, 0.88);
+            margin-bottom: 9px;
+        }
+
+        .map-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 26px;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 18px;
+            border-radius: 999px;
+            border: 1px solid rgba(216, 189, 127, 0.45);
+            color: var(--gold);
+            font-size: 0.75rem;
+            letter-spacing: 0.13em;
+            text-transform: uppercase;
+            transition: 0.25s ease;
+        }
+
+        .button:hover {
+            color: var(--navy);
+            background: var(--gold);
+        }
+
+        /* Locations */
+
+        .locations {
+            background: #101c35;
+        }
+
+        .map-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 26px;
+        }
+
+        .map-card {
+            overflow: hidden;
+            border-radius: 28px;
+            background: var(--glass);
+            border: 1px solid var(--border);
+            box-shadow: 0 16px 44px rgba(0, 0, 0, 0.22);
+        }
+
+        .map-card h3 {
+            color: var(--gold);
+            font-size: 1.7rem;
+            padding: 22px 24px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 330px;
+            border: 0;
+            display: block;
+            filter: saturate(0.85) contrast(1.05);
+        }
+
+        /* Gallery */
+
+        .gallery {
+            background:
+                radial-gradient(circle at 80% 10%, rgba(82, 39, 131, 0.35), transparent 34%),
+                #081426;
+        }
+
+        .gallery-note {
+            max-width: 760px;
+            margin: -24px auto 42px;
+            text-align: center;
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .gallery-item {
+            position: relative;
+            min-height: 320px;
+            border-radius: 26px;
+            overflow: hidden;
+            background: linear-gradient(135deg, rgba(59, 29, 99, 0.42), rgba(7, 20, 38, 0.72));
+            border: 1px solid var(--border);
+            box-shadow: 0 16px 44px rgba(0, 0, 0, 0.22);
+        }
+
+        .gallery-item::before {
+            content: "Add photo here";
+            position: absolute;
+            inset: 0;
+            display: grid;
+            place-items: center;
+            color: rgba(248, 244, 236, 0.72);
+            font-size: 0.85rem;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+
+        .gallery-item img {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            transition: transform 0.45s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.045);
+        }
+
+        .caption {
+            position: absolute;
+            z-index: 2;
+            left: 14px;
+            right: 14px;
+            bottom: 14px;
+            padding: 14px 16px;
+            border-radius: 18px;
+            background: rgba(7, 20, 38, 0.72);
+            backdrop-filter: blur(10px);
+            color: var(--ivory);
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        /* Gifts */
+
+        .gifts {
+            text-align: center;
+            background: linear-gradient(180deg, #081426, #111d37);
+        }
+
+        .gift-panel {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: clamp(30px, 6vw, 58px);
+            border-radius: 30px;
+            background: var(--glass);
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+        }
+
+        .gift-panel p {
+            color: rgba(248, 244, 236, 0.88);
+        }
+
+        footer {
+            text-align: center;
+            padding: 90px 8%;
+            background: #050d1a;
+        }
+
+        footer h2 {
+            color: var(--gold);
+            font-size: clamp(2.6rem, 5vw, 4.4rem);
+            margin-bottom: 18px;
+        }
+
+        footer p {
+            color: rgba(248, 244, 236, 0.78);
+        }
+
+        .footer-names {
+            margin-top: 28px;
+            color: var(--gold);
+            font-family: "Cormorant Garamond", serif;
+            font-size: 1.6rem;
+        }
+
+        /* Hero fit for shorter screens */
+
+        @media (max-height: 760px) and (min-width: 761px) {
+            .hero {
+                padding-top: 86px;
+                padding-bottom: 16px;
+            }
+
+            .hero-card {
+                padding: 24px 38px;
+            }
+
+            .greeting {
+                margin-bottom: 8px;
+            }
+
+            .hero h1 {
+                font-size: clamp(3.2rem, 6vw, 5.1rem);
+                margin-bottom: 10px;
+            }
+
+            .tagline {
+                margin-bottom: 8px;
+            }
+
+            .date {
+                margin-bottom: 10px;
+            }
+
+            .invite {
+                font-size: 0.88rem;
+                line-height: 1.55;
+            }
+
+            .countdown {
+                margin-top: 18px;
+            }
+
+            .time-box {
+                padding: 12px 8px;
+            }
+        }
+
+        /* Responsive */
+
+        @media (max-width: 980px) {
+            .nav-inner {
+                justify-content: center;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .cards,
+            .map-grid,
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-item,
+            .gallery-item img {
+                min-height: 360px;
+                height: 360px;
+            }
+        }
+
+        @media (max-width: 760px) {
+            section {
+                padding: 86px 6%;
+                scroll-margin-top: 145px;
+            }
+
+            .nav-inner {
+                padding: 12px 6%;
+            }
+
+            .nav-links {
+                gap: 12px;
+            }
+
+            .nav-links a {
+                font-size: 0.66rem;
+            }
+
+            .hero {
+                min-height: 100svh;
+                padding: 150px 6% 22px;
+            }
+
+            .hero-card {
+                border-radius: 26px;
+                padding: 22px;
+            }
+
+            .hero h1 {
+                font-size: clamp(3rem, 15vw, 4.6rem);
+            }
+
+            .invite {
+                font-size: 0.88rem;
+                line-height: 1.55;
+            }
+
+            .countdown {
+                grid-template-columns: repeat(2, 1fr);
+                margin-top: 20px;
+            }
+
+            .timeline::after {
+                left: 18px;
+            }
+
+            .timeline-item,
+            .timeline-item.left,
+            .timeline-item.right {
+                width: 100%;
+                left: 0;
+                text-align: left;
+                padding-left: 56px;
+                padding-right: 0;
+            }
+
+            .timeline-item.left::after,
+            .timeline-item.right::after {
+                left: 4px;
+            }
+        }
+
+        @media (max-width: 460px) {
+            .brand {
+                font-size: 1.25rem;
+            }
+
+            .nav-links {
+                gap: 10px;
+            }
+
+            .hero h1 {
+                font-size: 3.3rem;
+            }
+
+            .date {
+                letter-spacing: 0.20em;
+            }
+
+            .countdown {
+                gap: 12px;
+            }
+
+            .time-box {
+                padding: 14px 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="nav-inner">
+            <a class="brand" href="#home">Paul &amp; Yna</a>
+
+            <nav aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#story">Our Story</a></li>
+                    <li><a href="#timeline">Journey</a></li>
+                    <li><a href="#details">Details</a></li>
+                    <li><a href="#locations">Maps</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#gifts">Gifts</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-card">
+                <p class="greeting">Hi!</p>
+
+                <h1>
+                    Paul Ortega
+                    <span class="ampersand">&amp;</span>
+                    Yna Domingo
+                </h1>
+
+                <p class="tagline">Together Is Our Favorite Place To Be</p>
+                <p class="date">15 August 2026</p>
+
+                <p class="invite">
+                    We're delighted to announce our upcoming wedding and would be honored to have you celebrate this special milestone with us. Your presence will make our day even more meaningful.
+                </p>
+
+                <div class="countdown" aria-label="Wedding countdown">
+                    <div class="time-box">
+                        <span id="days">0</span>
+                        <small>Days</small>
+                    </div>
+
+                    <div class="time-box">
+                        <span id="hours">0</span>
+                        <small>Hours</small>
+                    </div>
+
+                    <div class="time-box">
+                        <span id="minutes">0</span>
+                        <small>Minutes</small>
+                    </div>
+
+                    <div class="time-box">
+                        <span id="seconds">0</span>
+                        <small>Seconds</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="story" class="story">
+            <div class="container">
+                <p class="section-kicker">Our Story</p>
+                <h2 class="section-title">How We <span>Met</span></h2>
+
+                <div class="story-panel">
+                    <p>Our story began in the Philippines, where we worked together as graphic designers. What started as a simple workplace friendship gradually grew into something truly special.</p>
+                    <p>As colleagues, we spent our days working side by side, but it was Yna who made the first move by asking Paul to be her work buddy. That simple gesture sparked a connection that would eventually change both of our lives.</p>
+                    <p>Over time, we grew closer through the little moments that became our favorite memories. We shared countless cups of coffee, watched movies together, explored the city through cycling adventures and spontaneous drives, traveled to other countries together, and discovered a mutual love for cooking and sharing meals.</p>
+                    <p>What began as friendship developed naturally into a relationship built on trust, companionship, laughter, and love. Through every adventure, both big and small, we found a home in each other.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="timeline" class="timeline-section">
+            <div class="container">
+                <p class="section-kicker">Milestones</p>
+                <h2 class="section-title">Our <span>Journey</span></h2>
+
+                <div class="timeline">
+                    <div class="timeline-item left">
+                        <div class="timeline-content">
+                            <h3>July 2021</h3>
+                            <p>💕 Virtually met</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item right">
+                        <div class="timeline-content">
+                            <h3>November 2021</h3>
+                            <p>🤝 Met in person for the first time</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item left">
+                        <div class="timeline-content">
+                            <h3>May 2022</h3>
+                            <p>❤️ Officially became a couple</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item right">
+                        <div class="timeline-content">
+                            <h3>July 2023</h3>
+                            <p>✈️ Yna moved to Australia, beginning our long-distance journey</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item left">
+                        <div class="timeline-content">
+                            <h3>November 2025</h3>
+                            <p>💍 Engagement</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item right">
+                        <div class="timeline-content">
+                            <h3>15 August 2026</h3>
+                            <p>👰🤵 Wedding Day</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="details" class="details">
+            <div class="container">
+                <p class="section-kicker">Invitation</p>
+                <h2 class="section-title">Wedding <span>Details</span></h2>
+
+                <div class="cards">
+                    <article class="card">
+                        <h3>Ceremony</h3>
+                        <p><strong>Time:</strong> 5:30 PM</p>
+                        <p><strong>Venue:</strong> Old Tower House, Perth Marriage Office</p>
+                        <p>115 Francis Street, Northbridge WA</p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Reception</h3>
+                        <p><strong>Time:</strong> 6:30 PM</p>
+                        <p><strong>Venue:</strong> YIP Malaysian Cuisine</p>
+                        <p>915 Albany Hwy, Perth WA 6101</p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Dress Code</h3>
+                        <p>Semi-Formal</p>
+                        <p>Please come dressed comfortably and elegantly for an evening celebration.</p>
+                    </article>
+                </div>
+
+                <div class="map-links">
+                    <a class="button" href="https://www.google.com/maps/search/?api=1&query=Old%20Tower%20House%20Perth%20Marriage%20Office%20115%20Francis%20Street%20Northbridge%20WA" target="_blank" rel="noopener">Open Ceremony Map</a>
+                    <a class="button" href="https://www.google.com/maps/search/?api=1&query=YIP%20Malaysian%20Cuisine%20915%20Albany%20Hwy%20Perth%20WA%206101" target="_blank" rel="noopener">Open Reception Map</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="locations" class="locations">
+            <div class="container">
+                <p class="section-kicker">Find Us</p>
+                <h2 class="section-title">Wedding <span>Locations</span></h2>
+
+                <div class="map-grid">
+                    <article class="map-card">
+                        <h3>Ceremony Location</h3>
+                        <iframe title="Ceremony Location" src="https://maps.google.com/maps?q=Old%20Tower%20House%20Perth%20Marriage%20Office%20115%20Francis%20Street%20Northbridge%20WA&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </article>
+
+                    <article class="map-card">
+                        <h3>Reception Location</h3>
+                        <iframe title="Reception Location" src="https://maps.google.com/maps?q=YIP%20Malaysian%20Cuisine%20915%20Albany%20Hwy%20Perth%20WA%206101&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="gallery">
+            <div class="container">
+                <p class="section-kicker">Memories</p>
+                <h2 class="section-title">Our Journey <span>Through Photos</span></h2>
+
+                <p class="gallery-note">
+                    Upload your photos into the <strong>images</strong> folder using these filenames.
+                </p>
+
+                <div class="gallery-grid">
+                    <article class="gallery-item">
+                        <img src="images/01-first-photo.jpg" alt="Our First Photo Together" onerror="this.style.display='none';">
+                        <div class="caption">Our First Photo Together</div>
+                    </article>
+
+                    <article class="gallery-item">
+                        <img src="images/02-adventures.jpg" alt="Coffee Dates and Adventures" onerror="this.style.display='none';">
+                        <div class="caption">Coffee Dates &amp; Adventures</div>
+                    </article>
+
+                    <article class="gallery-item">
+                        <img src="images/03-cycling-travel.jpg" alt="Cycling and Travel Memories" onerror="this.style.display='none';">
+                        <div class="caption">Cycling &amp; Travel Memories</div>
+                    </article>
+
+                    <article class="gallery-item">
+                        <img src="images/04-ldr.jpg" alt="Long Distance Journey" onerror="this.style.display='none';">
+                        <div class="caption">Long Distance Journey</div>
+                    </article>
+
+                    <article class="gallery-item">
+                        <img src="images/05-engagement.jpg" alt="Engagement" onerror="this.style.display='none';">
+                        <div class="caption">Engagement</div>
+                    </article>
+
+                    <article class="gallery-item">
+                        <img src="images/06-favorite.jpg" alt="Favorite Memory Together" onerror="this.style.display='none';">
+                        <div class="caption">Favorite Memory Together</div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="gifts" class="gifts">
+            <div class="container">
+                <p class="section-kicker">With Love</p>
+                <h2 class="section-title">Gifts</h2>
+
+                <div class="gift-panel">
+                    <p>Your presence is the only gift we need.</p>
+                    <br>
+                    <p>The greatest gift we could receive is the joy of celebrating our special day with the people we love. Your love, laughter, and company are more than enough, and we are grateful to share this milestone with you.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <h2>Thank You</h2>
+        <p>Thank you for being part of our journey.<br>We look forward to celebrating our special day with you.</p>
+        <p class="footer-names">Paul &amp; Yna</p>
+    </footer>
+
+    <script>
+        const weddingDate = new Date("August 15, 2026 17:30:00 GMT+0800").getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+
+            if (distance <= 0) {
+                document.getElementById("days").textContent = "0";
+                document.getElementById("hours").textContent = "0";
+                document.getElementById("minutes").textContent = "0";
+                document.getElementById("seconds").textContent = "0";
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").textContent = days;
+            document.getElementById("hours").textContent = hours;
+            document.getElementById("minutes").textContent = minutes;
+            document.getElementById("seconds").textContent = seconds;
+        }
+
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>
