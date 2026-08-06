@@ -587,13 +587,16 @@
         }
             .artwork-credit {
             position: absolute;
-            right: 25px;
+            right: 24px;
             bottom: 20px;
             font-family: "Cormorant Garamond", serif;
-            font-size: 1rem;
             font-style: italic;
-            color: rgba(216, 189, 127, 0.85);
-            z-index: 10;
+            font-size: 1rem;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            color: rgba(216, 189, 127, 0.9);
+            text-shadow: 0 2px 8px rgba(0,0,0,0.35);
+            z-index: 5;
         }
 
         /* Hero fit for shorter screens */
@@ -602,6 +605,9 @@
             .hero {
                 padding-top: 86px;
                 padding-bottom: 16px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
             }
 
             .hero-card {
@@ -610,9 +616,12 @@
                 backdrop-filter: blur(12px);
             }
             .artwork-credit {
-                right: 15px;
-                bottom: 15px;
+                position: static;
+                display: block;
+                text-align: center;
+                margin-top: 12px;
                 font-size: 0.85rem;
+                color: rgba(216, 189, 127, 0.85);
             }
 
             .greeting {
@@ -650,6 +659,13 @@
         /* Responsive */
 
         @media (max-width: 980px) {
+
+            .artwork-credit {
+            right: 16px;
+            bottom: 16px;
+            font-size: 0.9rem;
+            }
+            
             .nav-inner {
                 justify-content: center;
                 flex-direction: column;
